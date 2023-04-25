@@ -1,6 +1,8 @@
-# Showcase of Android app for using dynamic images in Google Maps markers
+# Android Google Maps dynamic markers
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+Showcase of Android app for using dynamic images in Google Maps dynamic markers
+
+![Logo](https://github.com/rchugunov/android_map_dynamic_pins/blob/main/images/Image1.png?raw=true)
 
 To compile and use the app you need to create the file **secrets.properties** with the following content:
 
