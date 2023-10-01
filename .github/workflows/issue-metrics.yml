@@ -19,7 +19,7 @@ jobs:
           first_day=$(date -d "last month" +%Y-%m-01)
           
           # Calculate the last day of the previous month
-          last_day=$(date -d "$first_day +1 month -1 day" +%Y-%m-%d)
+          last_day=$(date -d "$first_day +1 month" +%Y-%m-%d)
           
           #Set an environment variable with the date range
           echo "$first_day..$last_day"
