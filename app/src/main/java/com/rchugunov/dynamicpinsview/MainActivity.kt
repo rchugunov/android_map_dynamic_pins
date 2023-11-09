@@ -143,5 +143,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, MapMarkersRenderer
             Color.parseColor("#cfffb0"),
             Color.parseColor("#5998c5"),
         )
+
+        private const val TAG = "MainActivity_test"
     }
 }
