@@ -33,3 +33,5 @@ class MapApplication : Application() {
         }
     }
 }
+
+private const val TAG = "MapApplication_main"
