@@ -1,0 +1,29 @@
+[versions]
+androidPlugin = "8.1.0"
+kotlin = "1.9.10"
+mapsSecrets = "2.0.1"
+androidXCoreKtx = "1.12.0"
+androidx-appcompat = "1.6.1"
+
+[libraries]
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidXCoreKtx" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+material = { module = "com.google.android.material:material", version = "1.9.0" }
+constraint = { module = "androidx.constraintlayout:constraintlayout", version = "2.1.4" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version = "18.1.0" }
+maps-utils = { module = "com.google.maps.android:android-maps-utils", version = "2.3.0" }
+gson = { module = "com.google.code.gson:gson", version = "2.10.1" }
+picasso = { module = "com.squareup.picasso:picasso", version = "2.8" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version = "2.9.0" }
+retrofit-gson-converter = { module = "com.squareup.retrofit2:converter-gson", version = "2.9.0" }
+junit = { module = "junit:junit", version = "4.13.2" }
+thumbnailator = { module = "net.coobird:thumbnailator", version = "0.4.18" }
+androidx-test-junit = { module = "androidx.test.ext:junit", version = "1.1.5" }
+espresso = { module = "androidx.test.espresso:espresso-core", version = "3.5.1" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidPlugin" }
+android-library = { id = "com.android.library", version.ref = "androidPlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+maps-secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "mapsSecrets" }

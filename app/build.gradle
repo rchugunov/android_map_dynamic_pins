@@ -1,17 +1,17 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.maps.secrets)
 }
 
 android {
     namespace 'com.rchugunov.dynamicpinsview'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.rchugunov.dynamicpinsview"
         minSdk 26
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -30,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 }
 
@@ -45,19 +45,19 @@ secrets {
 }
 
 dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.constraint)
+    implementation(libs.play.services.maps)
+    implementation(libs.maps.utils)
+    implementation(libs.gson)
+    implementation(libs.picasso)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson.converter)
 
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.android.gms:play-services-maps:18.1.0'
-    implementation 'com.google.maps.android:android-maps-utils:2.3.0'
-    implementation 'com.google.code.gson:gson:2.9.0'
-    implementation 'com.squareup.picasso:picasso:2.8'
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    testImplementation 'junit:junit:4.13.2'
-    testImplementation 'net.coobird:thumbnailator:0.4.18'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    testImplementation(libs.junit)
+    testImplementation(libs.thumbnailator)
+    androidTestImplementation(libs.androidx.test.junit)
+    androidTestImplementation(libs.espresso)
 }
